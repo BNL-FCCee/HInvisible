@@ -10,11 +10,13 @@ Clone the repository, including the FCCAnalyses submodule.
 Via ssh:
 ```shell
 git clone --recurse-submodules git@github.com:BNL-FCCee/HInvisible.git HInvisible
+cd HInvisible
 ```
 
 or via https:
 ```shell
 git clone --recurse-submodules https://github.com/BNL-FCCee/HInvisible.git HInvisible
+cd HInvisible
 ```
 
 
@@ -29,7 +31,7 @@ source ./setup.sh
 mkdir build install
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=../install
-time make install -j2
+time make install
 cd ../..
 ```
 
