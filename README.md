@@ -47,6 +47,6 @@ The analysis proceeds in multiple steps. Execute these steps in squence
 
 
 ```shell
-fccanalysis run analysis_HInv_stage1.py
-fccanalysis final analysis_HInv_final.py
+fccanalysis run analysis_HInvMuMu_stage1.py
+fccanalysis final analysis_HInvMuMu_final.py
 ```
