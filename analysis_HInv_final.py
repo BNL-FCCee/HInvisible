@@ -54,5 +54,11 @@ cutList = {
 
 #Dictionary for the ouput variable/hitograms. The key is the name of the variable in the output files. "name" is the name of the variable in the input file, "title" is the x-axis label of the histogram, "bin" the number of bins of the histogram, "xmin" the minimum x-axis value and "xmax" the maximum x-axis value.
 histoList = {
-    "mu_pT":{"name":"muons_pt","title":"mu pT [GeV]","bin":100,"xmin":0,"xmax":-1}
+    "mu_pT":{"name":"muons_pt","title":"mu pT [GeV]","bin":100,"xmin":0,"xmax":-1},
+    "ZBosonPt":{"name":"ZBosonPt","title":"ZBosonPt [GeV]","bin":100,"xmin":0,"xmax":-1},
+    "MET":{"name":"MET","title":"MET [GeV]","bin":100,"xmin":0,"xmax":-1},
+    "recoil_M":{"name":"recoil_M","title":"recoil_M [GeV]","bin":100,"xmin":0,"xmax":-1},
+
+
+
     }

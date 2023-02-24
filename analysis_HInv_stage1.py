@@ -66,9 +66,19 @@ class RDFanalysis():
             # create branch with muon energy
             .Define("muons_e",   "ReconstructedParticle::get_e(muons)")
 
-        )
-        return df2
+            .Define("MET", "ReconstructedParticle::get_pt(MissingET)") #absolute value of MET
 
+            # build a candidate Z boson
+            .Define("ZCandidate",    "ReconstructedParticle::resonanceBuilder(91)(muons)")
+            # Z boson pt
+            .Define("ZBosonPt",   "ReconstructedParticle::get_pt(ZCandidate)")
+
+            .Define("recoilParticle",  "ReconstructedParticle::recoilBuilder(240)(ZCandidate)")
+            # create branch with recoil mass
+            .Define("recoil_M","ReconstructedParticle::get_mass(recoilParticle)")
+
+        )
+        return df2 
 
     #__________________________________________________________
     #Mandatory: output function, please make sure you return the branchlist as a python list
@@ -78,5 +88,8 @@ class RDFanalysis():
             "muons_y",
             "muons_p",
             "muons_e",
+            "ZBosonPt",
+            "MET",
+            "recoil_M"
         ]
         return branchList
