@@ -1,2 +1,4 @@
 outputs_HInv/*
 __pycache__/*
+.Xauthority
+*.cc
