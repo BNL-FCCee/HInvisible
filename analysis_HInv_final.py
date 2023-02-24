@@ -16,10 +16,11 @@ processList = {
 
 
 #Link to the dictonary that contains all the cross section informations etc...
+# can be found at: /cvmfs/fcc.cern.ch/FCCDicts/
 procDict = "FCCee_procDict_winter2023_IDEA.json"
 
 #Add MySample_p8_ee_ZH_ecm240 as it is not an offical process
-#procDictAdd={"wzp6_ee_mumuH_ecm240":{"numberOfEvents": 10000000, "sumOfWeights": 10000000, "crossSection": 0.201868, "kfactor": 1.0, "matchingEfficiency": 1.0}}
+#procDictAdd={"wzp6_ee_mumuH_ecm240":{"numberOfEvents": 1200000, "sumOfWeights": 1200000, "crossSection": 0.0067643, "kfactor": 1.0, "matchingEfficiency": 1.0}}
 
 #Number of CPUs to use
 nCPUS = 2
