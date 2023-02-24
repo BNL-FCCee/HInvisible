@@ -39,6 +39,10 @@ class RDFanalysis():
     #Mandatory: analysers funtion to define the analysers to process, please make sure you return the last dataframe, in this example it is df2
     def analysers(df):
         df2 = (
+
+            # it looks like the 'ReconstructedParticles' are implemented as 'ROOT::VecOps::RVec':
+            # https://root.cern.ch/doc/master/classROOT_1_1VecOps_1_1RVec.html
+
             df
             # define an alias for muon index collection
             .Alias("Muon0", "Muon#0.index")
