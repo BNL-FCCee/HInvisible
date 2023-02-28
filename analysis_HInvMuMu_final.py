@@ -1,4 +1,4 @@
-# run as: fccanalysis final analysis_HInv_final.py
+# run as: fccanalysis final analysis_HInvMuMu_final.py
 
 #Input directory where the files produced at the pre-selection level are
 inputDir  = "outputs_HInv/stage1"

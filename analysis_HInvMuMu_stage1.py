@@ -1,10 +1,10 @@
-# run as: fccanalysis run analysis_HInv_stage1.py
+# run as: fccanalysis run analysis_HInvMuMu_stage1.py
 
 #Mandatory: List of processes
 processList = {
     #'p8_ee_ZZ_ecm240':{},#Run the full statistics in one output file named <outputDir>/p8_ee_ZZ_ecm240.root
     #'p8_ee_WW_ecm240':{'fraction':0.5, 'chunks':2}, #Run 50% of the statistics in two files named <outputDir>/p8_ee_WW_ecm240/chunk<N>.root
-    'wzp6_ee_mumuH_ecm240':{'fraction':1., 'output':'wzp6_ee_mumuH_ecm240'} #Run 20% of the statistics in one file named <outputDir>/p8_ee_ZH_ecm240_out.root (example on how to change the output name)
+    'wzp6_ee_mumuH_ecm240':{'fraction':1., 'output':'wzp6_ee_mumuH_ecm240'} #Run 100% of the statistics in one file named <outputDir>/p8_ee_ZH_ecm240_out.root (example on how to change the output name)
 }
 
 #Mandatory: Production tag when running over EDM4Hep centrally produced events, this points to the yaml files for getting sample statistics
