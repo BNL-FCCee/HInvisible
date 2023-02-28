@@ -71,6 +71,7 @@ class RDFanalysis():
             .Define("muons_e",   "ReconstructedParticle::get_e(muons)")
 
             .Define("MET", "ReconstructedParticle::get_pt(MissingET)") #absolute value of MET
+            #.Define("METSorted", "Sort(MET)") #absolute value of MET
 
             # build a candidate Z boson
             .Define("ZCandidate",    "ReconstructedParticle::resonanceBuilder(91)(muons)")
@@ -80,6 +81,9 @@ class RDFanalysis():
             .Define("recoilParticle",  "ReconstructedParticle::recoilBuilder(240)(ZCandidate)")
             # create branch with recoil mass
             .Define("recoil_M","ReconstructedParticle::get_mass(recoilParticle)")
+            #.Filter("MET[0]>10.")
+            #.Filter("zed_leptonic_recoil_m.size()>0")
+
 
         )
         return df2 
@@ -94,6 +98,7 @@ class RDFanalysis():
             "muons_e",
             "ZBosonPt",
             "MET",
-            "recoil_M"
+            "recoil_M",
+
         ]
         return branchList
