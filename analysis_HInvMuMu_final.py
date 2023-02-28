@@ -30,8 +30,8 @@ doTree = False
 
 ###Dictionnay of the list of cuts. The key is the name of the selection that will be added to the output file
 cutList = {
-    "sel0" : "1",
-    #"sel1" : "selected_jets_pt_0 > 20",
+    "sel0_NoCuts" : "1",
+    "sel1_METCut" : "MET[0] > 10",
     #"sel2" : "selected_jets_pt_0 > 30",
     #"sel3" : "selected_jets_pt_0 > 40",
     #"sel4" : "selected_jets_pt_0 > 50",
