@@ -39,7 +39,7 @@ cd ../..
 
 Then on every return do 
 ```shell
-source FCCAnalyses/setup.sh
+cd FCCAnalyses; source setup.sh; cd ..
 ```
 
 ## Run the selection
