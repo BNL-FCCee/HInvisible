@@ -23,7 +23,7 @@ procDict = "FCCee_procDict_winter2023_IDEA.json"
 #procDictAdd={"wzp6_ee_mumuH_ecm240":{"numberOfEvents": 1200000, "sumOfWeights": 1200000, "crossSection": 0.0067643, "kfactor": 1.0, "matchingEfficiency": 1.0}}
 
 #Number of CPUs to use
-nCPUS = 2
+nCPUS = 1
 
 #produces ROOT TTrees, default is False
 doTree = False

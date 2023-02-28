@@ -17,7 +17,7 @@ outputDir   = "outputs_HInv/stage1"
 #analysisName = "My Analysis"
 
 #Optional: ncpus, default is 4
-nCPUS       = 2
+nCPUS       = 1
 
 #Optional running on HTCondor, default is False
 #runBatch    = False
