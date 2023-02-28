@@ -1,10 +1,10 @@
 # run as: fccanalysis final analysis_HInvMuMu_final.py
 
 #Input directory where the files produced at the pre-selection level are
-inputDir  = "outputs_HInv/stage1"
+inputDir  = "outputs_HInvMuMu/stage1"
 
 #Input directory where the files produced at the pre-selection level are
-outputDir  = "outputs_HInv/final/"
+outputDir  = "outputs_HInvMuMu/final/"
 
 
 #Mandatory: List of processes
