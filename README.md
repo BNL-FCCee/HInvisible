@@ -43,10 +43,16 @@ cd FCCAnalyses; source setup.sh; cd ..
 ```
 
 ## Run the selection
-The analysis proceeds in multiple steps. Execute these steps in squence
-
+The analysis proceeds in multiple steps. Execute these steps in squence.
+H->inv, Z->mumu selection
 
 ```shell
 fccanalysis run analysis_HInvMuMu_stage1.py
 fccanalysis final analysis_HInvMuMu_final.py
+```
+
+H->inv, Z->jj selection ( **work in progress** )
+
+```shell
+fccanalysis run analysis_HInvjj_stage1.py
 ```
