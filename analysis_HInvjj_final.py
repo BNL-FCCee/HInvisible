@@ -1,17 +1,17 @@
-# run as: fccanalysis final analysis_HInvMuMu_final.py
+# run as: fccanalysis final analysis_HInvjj_final.py
 
 #Input directory where the files produced at the pre-selection level are
-inputDir  = "outputs_HInvMuMu/stage1"
+inputDir  = "outputs_HInvjj/stage1"
 
 #Input directory where the files produced at the pre-selection level are
-outputDir  = "outputs_HInvMuMu/final/"
+outputDir  = "outputs_HInvjj/final/"
 
 
 #Mandatory: List of processes
 processList = {
     #'p8_ee_ZZ_ecm240':{},#Run the full statistics in one output file named <outputDir>/p8_ee_ZZ_ecm240.root
     #'p8_ee_WW_ecm240':{'fraction':0.5, 'chunks':2}, #Run 50% of the statistics in two files named <outputDir>/p8_ee_WW_ecm240/chunk<N>.root
-    'wzp6_ee_mumuH_ecm240':{} #Run over the full statistics from the previous stage's input file <inputDir>/p8_ee_ZH_ecm240_out.root. 
+    'wzp6_ee_qqH_ecm240':{} #Run over the full statistics from the previous stage's input file <inputDir>/p8_ee_ZH_ecm240_out.root. 
 }
 
 
@@ -33,11 +33,10 @@ cutList = {
     "sel0_NoCuts" : "1",
     "sel1_METCut" : "MET[0] > 10",
     # cut 60 < mZ < 100 GeV for bb, cut mZ \pm 5 GeV for qq/mumu ,  cut mZ \pm 4 GeV for ee
-    "sel2_mZCut" : "ZBosonMass[0] > 91.1-5 && ZBosonMass[0] < 91.1+5", 
-    #"sel2" : "selected_jets_pt_0 > 30",
+    "sel2_mZCut" : "ZBosonMass[0] > 60 && ZBosonMass[0] < 100", 
+
     #"sel3" : "selected_jets_pt_0 > 40",
     #"sel4" : "selected_jets_pt_0 > 50",
-
     #"sel0" : "Zcand_m > 40 && Zcand_m < 120",
 }
 
@@ -57,7 +56,7 @@ cutList = {
 
 #Dictionary for the ouput variable/hitograms. The key is the name of the variable in the output files. "name" is the name of the variable in the input file, "title" is the x-axis label of the histogram, "bin" the number of bins of the histogram, "xmin" the minimum x-axis value and "xmax" the maximum x-axis value.
 histoList = {
-    "mu_pT":{"name":"muons_pt","title":"mu pT [GeV]","bin":100,"xmin":0,"xmax":-1},
+    "jets_pt":{"name":"jets_pt","title":"jet pT [GeV]","bin":100,"xmin":0,"xmax":-1},
     "ZBosonPt":{"name":"ZBosonPt","title":"ZBosonPt [GeV]","bin":100,"xmin":0,"xmax":-1},
     "ZBosonMass":{"name":"ZBosonMass","title":"m_Z [GeV]","bin":100,"xmin":0,"xmax":-1},
     "MET":{"name":"MET","title":"MET [GeV]","bin":100,"xmin":0,"xmax":-1},
