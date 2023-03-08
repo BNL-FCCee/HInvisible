@@ -77,6 +77,8 @@ class RDFanalysis():
             .Define("ZCandidate",    "ReconstructedParticle::resonanceBuilder(91)(muons)")
             # Z boson pt
             .Define("ZBosonPt",   "ReconstructedParticle::get_pt(ZCandidate)")
+            # Z boson mass
+            .Define("ZBosonMass",   "ReconstructedParticle::get_mass(ZCandidate)")
 
             .Define("recoilParticle",  "ReconstructedParticle::recoilBuilder(240)(ZCandidate)")
             # create branch with recoil mass
@@ -97,6 +99,7 @@ class RDFanalysis():
             "muons_p",
             "muons_e",
             "ZBosonPt",
+            "ZBosonMass",
             "MET",
             "recoil_M",
 

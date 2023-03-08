@@ -32,6 +32,8 @@ doTree = False
 cutList = {
     "sel0_NoCuts" : "1",
     "sel1_METCut" : "MET[0] > 10",
+    # cut 60 < mZ < 100 GeV for bb, cut mZ \pm 5 GeV for qq/mumu ,  cut mZ \pm 4 GeV for ee
+    "sel2_mZCut" : "ZBosonMass[0] > 91.1-5 && ZBosonMass[0] < 91.1+5", 
     #"sel2" : "selected_jets_pt_0 > 30",
     #"sel3" : "selected_jets_pt_0 > 40",
     #"sel4" : "selected_jets_pt_0 > 50",
@@ -57,6 +59,7 @@ cutList = {
 histoList = {
     "mu_pT":{"name":"muons_pt","title":"mu pT [GeV]","bin":100,"xmin":0,"xmax":-1},
     "ZBosonPt":{"name":"ZBosonPt","title":"ZBosonPt [GeV]","bin":100,"xmin":0,"xmax":-1},
+    "ZBosonMass":{"name":"ZBosonMass","title":"m_Z [GeV]","bin":100,"xmin":0,"xmax":-1},
     "MET":{"name":"MET","title":"MET [GeV]","bin":100,"xmin":0,"xmax":-1},
     "recoil_M":{"name":"recoil_M","title":"recoil_M [GeV]","bin":100,"xmin":0,"xmax":-1},
 
