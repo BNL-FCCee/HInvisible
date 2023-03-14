@@ -1,5 +1,5 @@
 #!/bin/bash
-cd FCCAnalyses
+cd FCCAnalyses_BNL_Dev
 source ./setup.sh
 mkdir -p build install
 cd build
