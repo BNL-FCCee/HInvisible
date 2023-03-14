@@ -1,8 +1,15 @@
+"""
+25 January 2023
+Abraham Tishelman-Charny
+
+The purpose of this python module is to perform initial selections and variable definitions for processing FCC files.
+"""
+
 import os
 import urllib.request
 import yaml 
 
-configFile = "RunConfig.yaml"
+configFile = "/afs/cern.ch/work/a/atishelm/private/HInvisible/RunConfig.yaml" # for the moment, need to specify full path so that HTCondor node can find this file (since afs is mounted). Need to check how to pass this as an input file to HTCondor job.
 with open(configFile, 'r') as cfg:
     values = yaml.safe_load(cfg)
     
@@ -27,11 +34,12 @@ processList = {
     # 'wzp6_ee_ccH_HZZ_ecm240' : {'chunks':20},	
     # 'wzp6_ee_ccH_Htautau_ecm240' : {'chunks':20},
     # 'wzp6_ee_ccH_Haa_ecm240' : {'chunks':20},
-    'wzp6_ee_ccH_Hbb_ecm240':{'chunks':20},
+    #'wzp6_ee_ccH_Hbb_ecm240':{'chunks':20},
 
     # backgrounds
     #'p8_ee_WW_ecm240' : {'chunks':20},
-    #'p8_ee_ZZ_ecm240' : {'chunks':20}
+    #'p8_ee_ZZ_ecm240' : {'chunks':20},
+    'p8_ee_Zqq_ecm240' : {'chunks':20}
 }
 
 #Mandatory: Production tag when running over EDM4Hep centrally produced events, this points to the yaml files for getting sample statistics
@@ -45,7 +53,7 @@ else:
 
 nCPUS       = 64
 runBatch    = batch
-batchQueue = "longlunch"
+batchQueue = "longlunch" # 2 hours
 
 # Define any functionality which is not implemented in FCCAnalyses
 
